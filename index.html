@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventify – Dein nächstes Erlebnis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <!-- FEHLER: Logo sieht klickbar aus, führt aber nicht zur Startseite -->
+    <div class="logo" onclick="logoProblem()">
+        EVENT<span>IFY</span>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">Startseite</a>
+        <a href="events.html">Events</a>
+
+        <!-- FEHLER: Link funktioniert nicht -->
+        <a href="#">Kategorien</a>
+
+        <a href="#about">Über uns</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <!-- FEHLER: Suchfeld sieht funktionierend aus, macht aber nichts -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Events suchen...">
+        <button onclick="fakeSearch()">🔍</button>
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">DEIN NÄCHSTES ERLEBNIS</p>
+
+        <h1>
+            Finde ein Event,<br>
+            das zu dir past.
+        </h1>
+
+        <p>
+            Konzerte, Festivals, Comedy, Sport und Kultur –
+            entdecke Veranstaltungen in deiner Nähe.
+        </p>
+
+        <a href="events.html" class="btn primary">
+            Events entdecken
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <p class="eyebrow">EVENTIFY</p>
+
+    <h2>Was möchtest du erleben?</h2>
+
+    <p class="section-text">
+        Egal ob Konzertabend, Festival oder Comedy –
+        bei Eventify findest du dein nechstes Erlebnis.
+    </p>
+
+
+    <div class="categories">
+
+        <div class="category-card">
+            <div class="category-icon">🎵</div>
+            <h3>Musik</h3>
+            <p>Konzerte & Festivals</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🎭</div>
+            <h3>Kultur</h3>
+            <p>Theater & Ausstelungen</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">😂</div>
+            <h3>Comedy</h3>
+            <p>Comedy & Shows</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">⚽</div>
+            <h3>Sport</h3>
+            <p>Sportveranstaltungen</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="featured">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">EMPFEHLUNGEN</p>
+            <h2>Beliebte Events</h2>
+        </div>
+
+        <a href="events.html" class="text-link">
+            Alle Events →
+        </a>
+
+    </div>
+
+
+    <div class="event-grid">
+
+        <!-- EVENT 1 -->
+
+        <article class="event-card">
+
+            <div class="event-image music">
+
+                <span class="event-category">
+                    MUSIK
+                </span>
+
+            </div>
+
+            <div class="event-info">
+
+                <p class="date">
+                    17. OKTOBER 2026
+                </p>
+
+                <h3>
+                    Summer Beats
+                </h3>
+
+                <p>
+                    Open-Air Festival mit Live-Musik
+                    und DJs.
+                </p>
+
+                <div class="event-bottom">
+
+                    <strong>
+                        ab 29,90 €
+                    </strong>
+
+                    <a href="event.html?id=summer-beats">
+                        Mehr erfahren
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- EVENT 2 -->
+
+        <article class="event-card">
+
+            <div class="event-image comedy">
+
+                <span class="event-category">
+                    COMEDY
+                </span>
+
+            </div>
+
+            <div class="event-info">
+
+                <!-- FEHLER: falsche Groß-/Kleinschreibung -->
+                <p class="date">
+                    24. oktober 2026
+                </p>
+
+                <h3>
+                    Comedy Night
+                </h3>
+
+                <p>
+                    Ein Abend voller Humor und
+                    guter Unterhaltung.
+                </p>
+
+                <div class="event-bottom">
+
+                    <strong>
+                        ab 19 
+                    </strong>
+
+                    <a href="event.html?id=comedy">
+                        Entdecken
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- EVENT 3 -->
+
+        <article class="event-card">
+
+            <div class="event-image culture">
+
+                <span class="event-category">
+                    KULTUR
+                </span>
+
+            </div>
+
+            <div class="event-info">
+
+                <p class="date">
+                    31.10.2026
+                </p>
+
+                <h3>
+                    Nacht der Kunst
+                </h3>
+
+                <p>
+                    Kunst, Musik und ausergewöhnliche
+                    Installationen.
+                </p>
+
+                <div class="event-bottom">
+
+                    <strong>
+                        ab 24,90 €
+                    </strong>
+
+                    <a href="event.html?id=kunst">
+                        Jetzt dabei sein
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- FEHLER: defektes Bild ohne alt-Text -->
+
+<section class="broken-image-section">
+
+    <div class="broken-image">
+
+        <img
+            src="images/eventify-festival.jpg"
+            class="missing-image"
+        >
+
+    </div>
+
+    <div class="broken-content">
+
+        <p class="eyebrow">
+            EVENTIFY LIVE
+        </p>
+
+        <h2>
+            Erlebe Momente,
+            die bleiben.
+        </h2>
+
+        <p>
+            Unsere Events bringen Menschen zusammen
+            und schaffen unvergessliche Momente.
+        </p>
+
+        <a href="events.html" class="btn primary">
+            Mehr entdecken
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FAKE KUNDENREZENSIONEN -->
+
+<section class="reviews">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">
+                DAS SAGEN UNSERE KUNDEN
+            </p>
+
+            <h2>
+                Stimmen aus der Community
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="review-grid">
+
+
+        <article class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                „Das war mit ABSTAND das beste Event
+                meines ganzen Lebens!!! Ich werde
+                garantiert nie wieder woanders Tickets
+                kaufen!!!“
+            </p>
+
+            <strong>
+                – Kevin Becker, 23
+            </strong>
+
+        </article>
+
+
+        <article class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                „Unglaublich!!! Einfach perfekt!!!
+                Die Musik war so gut, dass ich direkt
+                meinen Freunden geschrieben habe,
+                dass sie auch unbedingt hin müssen.“
+            </p>
+
+            <strong>
+                – Lisa Müller, 28
+            </strong>
+
+        </article>
+
+
+        <article class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                „Ich habe noch NIE so eine tolle
+                Website gesehen. Alles ist perfekt
+                und die Tickets sind natürlich auch
+                immer die günstigsten.“
+            </p>
+
+            <strong>
+                – Michael Klein, 41
+            </strong>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <div>
+
+        <p class="eyebrow">
+            BEREIT?
+        </p>
+
+        <h2>
+            Dein nächstes Erlebnis wartet.
+        </h2>
+
+    </div>
+
+    <a href="events.html" class="btn light">
+        Events entdecken
+    </a>
+
+</section>
+
+</main>
+
+
+<footer id="contact">
+
+    <div class="footer-logo">
+        EVENT<span>IFY</span>
+    </div>
+
+    <div>
+        <p>
+            © 2026 Eventify
+        </p>
+
+        <p>
+            Deine Plattform für besondere Erlebnisse.
+        </p>
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

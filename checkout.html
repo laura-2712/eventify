@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tickets kaufen – Eventify</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+
+    <div class="logo"
+         onclick="logoProblem()">
+
+        EVENT<span>IFY</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Startseite
+        </a>
+
+        <a href="events.html">
+            Events
+        </a>
+
+        <a href="#">
+            Kategorien
+        </a>
+
+        <a href="index.html#contact">
+            Kontakt
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+<main>
+
+
+<section class="checkout">
+
+
+    <div class="checkout-header">
+
+
+        <p class="eyebrow">
+            TICKETS
+        </p>
+
+
+        <h1>
+            Summer Beats 2026
+        </h1>
+
+
+        <p>
+            17. Oktober 2026 · Pirmasens
+        </p>
+
+
+    </div>
+
+
+    <div class="ticket-options">
+
+
+        <h2>
+            Wähle dein Ticket
+        </h2>
+
+
+        <label class="ticket-option">
+
+
+            <input
+                type="radio"
+                name="ticket"
+                value="39.90">
+
+
+            <div>
+
+                <strong>
+                    Standard Ticket
+                </strong>
+
+                <p>
+                    Einlass ab 19:00 Uhr
+                </p>
+
+            </div>
+
+
+            <span>
+                39,90 €
+            </span>
+
+
+        </label>
+
+
+        <!-- GÜNSTIGSTES TICKET -->
+
+        <label class="ticket-option cheap">
+
+
+            <input
+                type="radio"
+                name="ticket"
+                value="29.90"
+                checked>
+
+
+            <div>
+
+                <strong>
+                    Early Bird
+                </strong>
+
+                <p>
+                    Begrenztes Kontingent
+                </p>
+
+            </div>
+
+
+            <span>
+                29,90 €
+            </span>
+
+
+        </label>
+
+
+        <label class="ticket-option">
+
+
+            <input
+                type="radio"
+                name="ticket"
+                value="69.90">
+
+
+            <div>
+
+                <strong>
+                    VIP Ticket
+                </strong>
+
+                <p>
+                    VIP-Bereich + Getränk
+                </p>
+
+            </div>
+
+
+            <span>
+                69,90 €
+            </span>
+
+
+        </label>
+
+
+    </div>
+
+
+    <div class="checkout-form">
+
+
+        <h2>
+            Deine Daten
+        </h2>
+
+
+        <!-- FEHLER: Pflichtfelder nicht gekennzeichnet -->
+
+        <label>
+
+            Vorname
+
+            <input
+                type="text"
+                id="firstname"
+                placeholder="Max">
+
+        </label>
+
+
+        <label>
+
+            Nachname
+
+            <input
+                type="text"
+                id="lastname"
+                placeholder="Mustermann">
+
+        </label>
+
+
+        <label>
+
+            E-Mail
+
+            <input
+                type="email"
+                id="email"
+                placeholder="max@beispiel.de">
+
+        </label>
+
+
+        <label>
+
+            Zahlungsart
+
+            <select id="payment">
+
+                <option value="">
+                    Bitte auswählen
+                </option>
+
+                <option>
+                    Kreditkarte
+                </option>
+
+                <option>
+                    PayPal
+                </option>
+
+                <option>
+                    Überweisung
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <!-- FEHLER: unklare Checkbox -->
+
+        <label class="checkbox-label">
+
+            <input
+                type="checkbox"
+                id="newsletter">
+
+            Ich möchte Informationen erhalten.
+
+        </label>
+
+
+        <div class="order-summary">
+
+            <span>
+                Gesamtpreis
+            </span>
+
+            <strong id="total">
+                29,90 €
+            </strong>
+
+        </div>
+
+
+        <!-- FEHLER: unklare Button-Beschriftung -->
+
+        <button
+            class="btn primary full"
+            onclick="completePurchase()">
+
+            Weiter
+
+        </button>
+
+
+        <p class="small-print">
+
+            Dies ist eine Demo.
+            Es findet keine echte Zahlung statt.
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+
+    <div class="footer-logo">
+        EVENT<span>IFY</span>
+    </div>
+
+
+    <p>
+        © 2026 Eventify
+    </p>
+
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

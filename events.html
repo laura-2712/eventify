@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Events entdecken – Eventify</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+
+    <!-- FEHLER: Logo funktioniert nicht -->
+
+    <div class="logo"
+         onclick="logoProblem()">
+
+        EVENT<span>IFY</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Startseite
+        </a>
+
+        <a href="events.html"
+           class="active">
+
+            Events
+
+        </a>
+
+        <a href="#">
+            Kategorien
+        </a>
+
+        <a href="index.html#about">
+            Über uns
+        </a>
+
+        <a href="index.html#contact">
+            Kontakt
+        </a>
+
+    </nav>
+
+
+    <!-- NICHT FUNKTIONSFÄHIGE SUCHE -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            placeholder="Events suchen..."
+            id="searchInput">
+
+        <button onclick="fakeSearch()">
+            🔍
+        </button>
+
+    </div>
+
+
+</header>
+
+
+<main>
+
+
+<section class="page-header">
+
+    <p class="eyebrow">
+        EVENTS ENTDECKEN
+    </p>
+
+    <h1>
+        Was möchtest du erleben?
+    </h1>
+
+    <p>
+        Entdecke Veranstaltungen und finde
+        dein nächstes Highlight.
+    </p>
+
+</section>
+
+
+<section class="events-section">
+
+
+    <div class="filter-bar">
+
+
+        <div>
+
+            <label for="category">
+                Kategorie
+            </label>
+
+            <select id="category">
+
+                <option value="all">
+                    Alle Kategorien
+                </option>
+
+                <option value="music">
+                    Musik
+                </option>
+
+                <option value="comedy">
+                    Comedy
+                </option>
+
+                <option value="culture">
+                    Kultur
+                </option>
+
+                <option value="sport">
+                    Sport
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div>
+
+            <label for="price">
+                Maximaler Preis
+            </label>
+
+            <select id="price">
+
+                <option value="all">
+                    Alle Preise
+                </option>
+
+                <option value="20">
+                    bis 20 €
+                </option>
+
+                <option value="30">
+                    bis 30 €
+                </option>
+
+                <option value="50">
+                    bis 50 €
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- FEHLER: Filter werden nicht automatisch übernommen -->
+
+        <button class="btn filter-btn"
+                onclick="applyFilters()">
+
+            Filter anwenden
+
+        </button>
+
+
+    </div>
+
+
+    <div class="event-grid"
+         id="eventGrid">
+
+
+        <article class="event-card filter-event"
+                 data-category="music"
+                 data-price="29.90">
+
+
+            <div class="event-image music">
+
+                <span class="event-category">
+                    MUSIK
+                </span>
+
+            </div>
+
+
+            <div class="event-info">
+
+
+                <p class="date">
+                    17. OKTOBER 2026 · PIRMASENS
+                </p>
+
+
+                <h3>
+                    Summer Beats
+                </h3>
+
+
+                <p>
+                    Open-Air Festival mit Live-Musik,
+                    DJs und Street Food.
+                </p>
+
+
+                <div class="event-bottom">
+
+
+                    <strong>
+                        ab 29,90 €
+                    </strong>
+
+
+                    <a href="event.html?id=summer-beats">
+                        Mehr erfahren
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+        <article class="event-card filter-event"
+                 data-category="comedy"
+                 data-price="19.90">
+
+
+            <div class="event-image comedy">
+
+                <span class="event-category">
+                    COMEDY
+                </span>
+
+            </div>
+
+
+            <div class="event-info">
+
+
+                <!-- FEHLER: Rechtschreibung -->
+
+                <p class="date">
+                    24. OKTOBER 2026 · SAARBRÜCKEN
+                </p>
+
+
+                <h3>
+                    Comedy Night
+                </h3>
+
+
+                <p>
+                    Die besten Comedians der Region
+                    an einem Abend.
+                </p>
+
+
+                <div class="event-bottom">
+
+
+                    <strong>
+                        ab 19,90 €
+                    </strong>
+
+
+                    <a href="event.html?id=comedy">
+                        Entdecken
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+        <article class="event-card filter-event"
+                 data-category="culture"
+                 data-price="24.90">
+
+
+            <div class="event-image culture">
+
+                <span class="event-category">
+                    KULTUR
+                </span>
+
+            </div>
+
+
+            <div class="event-info">
+
+
+                <p class="date">
+                    31.10.2026 · KAISERSLAUTERN
+                </p>
+
+
+                <h3>
+                    Nacht der Kunst
+                </h3>
+
+
+                <p>
+                    Kunst, Musik und außergewöhnliche
+                    Installationen.
+                </p>
+
+
+                <div class="event-bottom">
+
+
+                    <strong>
+                        ab 24,90 €
+                    </strong>
+
+
+                    <a href="event.html?id=kunst">
+                        Jetzt dabei sein
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+        <article class="event-card filter-event"
+                 data-category="sport"
+                 data-price="39.90">
+
+
+            <div class="event-image sport">
+
+                <span class="event-category">
+                    SPORT
+                </span>
+
+            </div>
+
+
+            <div class="event-info">
+
+
+                <p class="date">
+                    07. NOVEMBER 2026 · TRIER
+                </p>
+
+
+                <h3>
+                    Fight Night
+                </h3>
+
+
+                <p>
+                    Spannender Kampfsport und
+                    internationale Gäste.
+                </p>
+
+
+                <div class="event-bottom">
+
+
+                    <strong>
+                        ab 39,90 €
+                    </strong>
+
+
+                    <a href="event.html?id=fight">
+                        Mehr erfahren
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+
+    <div class="footer-logo">
+        EVENT<span>IFY</span>
+    </div>
+
+
+    <p>
+        © 2026 Eventify
+    </p>
+
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
